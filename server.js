@@ -9,7 +9,13 @@ const userRoutes = require("./routes/user");
 
 const PORT = process.env.PORT ?? 5050;
 
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://mern-workout-client.vercel.app/login"],
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use((req, res, next) => {
   console.log("method:", req.method);
