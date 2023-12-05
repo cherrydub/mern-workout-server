@@ -19,10 +19,6 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/", (req, res) => {
-  res.json({ msg: "welcome to the main page" });
-});
-
 app.use("/api/workouts", workoutRoutes);
 
 app.use("/api/user", userRoutes);
