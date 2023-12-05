@@ -11,7 +11,7 @@ const PORT = process.env.PORT ?? 5050;
 
 app.use(
   cors({
-    origin: ["https://mern-workout-client.vercel.app/login"],
+    origin: ["https://mern-workout-client.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true,
   })
